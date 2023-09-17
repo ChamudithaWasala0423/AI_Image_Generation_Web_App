@@ -1,7 +1,23 @@
 const generateForm = document.querySelector(".generate-form");
 const ImageGallery = document.querySelector(".image-gallery");
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
+
+const userImageCarsd = (imgDataArray) => {
+  imgDataArray.forEach((imgObject, index) => {
+    const imgCard = ImageGallery.querySelector(".img-card")[index];
+    const imgElemnt = imgCard.querySelector("img");
+
+    //set the image sourse to the AI-Generated image Data
+    const aiGeneratedImg = `data:image/jpeg;base64,${imgObject.base64_json}`;
+    imgElemnt.src = aiGeneratedImg;
+
+    // when the image is loaded remove the loarding class
+    imgElemnt.onload = () => {
+      imgCard.classList.remove("loading");
+    };
+  });
+};
 
 generateAiImages = async (userPrompt, userImageQuantity) => {
   try {
@@ -26,6 +42,7 @@ generateAiImages = async (userPrompt, userImageQuantity) => {
     if (!response.ok) throw new Error("Something went wrong");
     const { data } = await response.json();
     // console.log(data);
+    userImageCarsd([...data]);
   } catch (error) {
     alert(error.message);
   }
