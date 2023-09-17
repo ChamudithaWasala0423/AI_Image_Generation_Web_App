@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create your own AI generated image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="image-generator">
+      <div class="content">
+        <h1>AI Image Geenerator Tool</h1>
+        <p>
+          Covert your text into an image within a second using AI Image image
+          Generator tool.
+        </p>
+        <form action="#" class="generate-form">
+          <input
+            type="text"
+            class="prompt-input"
+            placeholder="Describe what you want to see"
+            required
+          />
+          <div class="controls">
+            <select class="img-quantity">
+              <option value="1">1 Images</option>
+              <option value="2">2 Images</option>
+              <option value="3">3 Images</option>
+              <option value="4" selected>4 Images</option>
+            </select>
+            <button type="submit" class="generate-btn">Generate</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="image-gallery">
+      <div class="img-card">
+        <img src="assets/img-1.jpg" alt="image" />
+        <a href="#" class="download-btn">
+          <img src="assets//download.svg" alt="download icon" />
+        </a>
+      </div>
+      <div class="img-card">
+        <img src="assets/img-2.jpg" alt="image" />
+        <a href="#" class="download-btn">
+          <img src="assets//download.svg" alt="download icon" />
+        </a>
+      </div>
+      <div class="img-card">
+        <img src="assets/img-3.jpg" alt="image" />
+        <a href="#" class="download-btn">
+          <img src="assets//download.svg" alt="download icon" />
+        </a>
+      </div>
+      <div class="img-card">
+        <img src="assets/img-4.jpg" alt="image" />
+        <a href="#" class="download-btn">
+          <img src="assets//download.svg" alt="download icon" />
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
