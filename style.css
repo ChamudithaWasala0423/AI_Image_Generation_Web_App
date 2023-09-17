@@ -99,6 +99,14 @@
     padding: 10px;
 }
 
+.image-gallery {
+    display: flex;
+    gap: 15px;
+    padding: 0 15px;
+    max-width: 1250px;
+    margin: 50px 0;
+}
+
 .image-gallery .img-card{
    width: 285px;
    aspect-ratio: 1/1;
