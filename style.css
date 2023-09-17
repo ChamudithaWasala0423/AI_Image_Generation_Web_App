@@ -105,11 +105,15 @@
     padding: 0 15px;
     max-width: 1250px;
     margin: 50px 0;
+    justify-content: center;
 }
 
 .image-gallery .img-card{
    width: 285px;
    aspect-ratio: 1/1;
+   border-radius: 5px;
+   overflow: hidden;
+   position: relative;
 }
 
 .image-gallery .img-card img{
@@ -118,6 +122,18 @@
     object-fit: cover;
  }
 
+ .image-gallery .img-card .download-btn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+ }
 
  .image-gallery .img-card .download-btn img{
     width: 14px;
